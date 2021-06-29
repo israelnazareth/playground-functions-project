@@ -17,8 +17,8 @@ function splitSentence(word) {
 }
 
 // Desafio 4
-function concatName(names) {
-  return names[names.length - 1] + ', ' + names[0];
+function concatName(phrases) {
+  return phrases[phrases.length - 1] + ', ' + phrases[0];
 }
 
 // Desafio 5
@@ -27,8 +27,20 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(count) {
+  let maior = count[0];
+  let contagem = 0;
+
+  for (let index of count){
+    if (maior < count[index]){
+      maior = count[index]
+    }
+  }
+  for (let index of count) {
+    if (maior === index) {
+      contagem += 1;
+    }
+  } return contagem;
 }
 
 // Desafio 7
