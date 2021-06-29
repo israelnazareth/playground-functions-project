@@ -30,10 +30,9 @@ function footballPoints(wins, ties) {
 function highestCount(count) {
   let maior = count[0];
   let contagem = 0;
-
-  for (let index of count){
-    if (maior < count[index]){
-      maior = count[index]
+  for (let index of count) {
+    if (maior < index) {
+      maior = index;
     }
   }
   for (let index of count) {
@@ -41,11 +40,11 @@ function highestCount(count) {
       contagem += 1;
     }
   } return contagem;
-}
+} console.log(highestCount([-2, -2, -1]))
 
 // Desafio 7
 function catAndMouse() {
-  // seu código aqui
+  
 }
 
 // Desafio 8
