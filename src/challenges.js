@@ -40,11 +40,19 @@ function highestCount(count) {
       contagem += 1;
     }
   } return contagem;
-} console.log(highestCount([-2, -2, -1]))
+}
 
 // Desafio 7
-function catAndMouse() {
-  
+function catAndMouse(mouse, cat1, cat2) {
+  let cat1Pos = Math.abs(mouse - cat1);
+  let cat2Pos = Math.abs(mouse - cat2);
+  if (cat1Pos < cat2Pos) {
+    return "cat1"
+  } else if (cat2Pos < cat1Pos){
+    return "cat2"
+  } else {
+    return "os gatos trombam e o rato foge"
+  }
 }
 
 // Desafio 8
