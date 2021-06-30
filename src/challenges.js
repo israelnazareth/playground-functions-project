@@ -56,8 +56,19 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  
+function fizzBuzz(arrayX) {
+  let words = [];
+  for (let index of arrayX) {
+    if (index % 3 === 0 && index % 5 === 0) {
+      words.push('fizzBuzz');
+    } else if (index % 3 != 0 && index % 5 != 0) {
+      words.push('bug!');
+    } else if (index % 3 === 0) {
+      words.push('fizz');
+    } else if (index % 5 === 0) {
+      words.push('buzz');
+    }
+  }return words
 }
 
 // Desafio 9
