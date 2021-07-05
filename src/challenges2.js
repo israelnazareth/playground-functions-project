@@ -17,8 +17,26 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numbers) {
+  // Verifica se o array informado tem um tamanho diferente de 11,
+  // se os valores são menores que 0 ou se são maiores que 9.
+  if (numbers.length !== 11) {
+    return "Array com tamanho incorreto.";
+  } for (let values of numbers) {
+    if (values < 0 || values > 9 ) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+    // Verifica a quantidade de repetições de um número é maior ou igual a 3 vezes.
+    let times = 0;
+    for (let index of numbers) {      
+      if (values === index) {
+        times += 1;
+      } if (times >= 3) {
+        return "não é possível gerar um número de telefone com esses valores";
+      }
+    }
+  } // Retorna o array respeitando os parênteses, espaços e traços caso não tenha nenhum erro.
+  return '(' + numbers[0] + numbers[1] + ')' + ' ' + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + '-' + numbers[7] + numbers[8] + numbers[9] + numbers[10]  
 }
 
 // Desafio 12
