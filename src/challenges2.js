@@ -40,8 +40,15 @@ function generatePhoneNumber(numbers) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  // Quando a medida de qualquer um dos lados seja maior que a soma das medidas dos outros dois:
+  if (lineA > lineB + lineC || lineB > lineA + lineC || lineC > lineA + lineB) {
+    return false;
+  // Quando a medida de qualquer um dos lados seja menor que o valor absoluto da diferença entre essas medidas:
+  } if (lineA < Math.abs(lineB - lineC) || lineB < Math.abs(lineA - lineC) || lineC < Math.abs(lineA - lineB)) {
+    return false;
+  // Quando nenhuma das condições anteriores forem verdadeiras:
+  } return true;
 }
 
 // Desafio 13
