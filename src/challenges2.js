@@ -21,22 +21,22 @@ function generatePhoneNumber(numbers) {
   // Verifica se o array informado tem um tamanho diferente de 11,
   // se os valores são menores que 0 ou se são maiores que 9.
   if (numbers.length !== 11) {
-    return "Array com tamanho incorreto.";
+    return 'Array com tamanho incorreto.';
   } for (let values of numbers) {
     if (values < 0 || values > 9 ) {
-      return "não é possível gerar um número de telefone com esses valores";
+      return 'não é possível gerar um número de telefone com esses valores';
     }
     // Verifica a quantidade de repetições de um número é maior ou igual a 3 vezes.
     let times = 0;
-    for (let index of numbers) {      
+    for (let index of numbers) {
       if (values === index) {
         times += 1;
       } if (times >= 3) {
-        return "não é possível gerar um número de telefone com esses valores";
+        return 'não é possível gerar um número de telefone com esses valores';
       }
     }
   } // Retorna o array respeitando os parênteses, espaços e traços caso não tenha nenhum erro.
-  return '(' + numbers[0] + numbers[1] + ')' + ' ' + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + '-' + numbers[7] + numbers[8] + numbers[9] + numbers[10]  
+  return '(' + numbers[0] + numbers[1] + ')' + ' ' + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + '-' + numbers[7] + numbers[8] + numbers[9] + numbers[10];
 }
 
 // Desafio 12
@@ -56,21 +56,19 @@ function hydrate(drinks) {
   // Variáveis para o número de drinks e o número de copos dágua;
   let numberOfDrinks = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
   let glassOfWater = 0;
-
   // Percorrendo e comparando os valores do parâmetro 'drinks' e da variável 'numberOfDrinks';
-  for (values of numberOfDrinks) {
-    for (values2 of drinks) {
+  for (let values of numberOfDrinks) {
+    for (let values2 of drinks) {
       if (values == values2) {
         glassOfWater += values;
       }
     }
   }
-
   // Retorno do número de copos dágua.
   if (glassOfWater === 1) {
-    return glassOfWater + ' copo de água'
+    return glassOfWater + ' copo de água';
   } if (glassOfWater > 1) {
-    return glassOfWater + ' copos de água'
+    return glassOfWater + ' copos de água';
   }
 }
 
