@@ -52,8 +52,26 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinks) {
+  // Variáveis para o número de drinks e o número de copos dágua;
+  let numberOfDrinks = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  let glassOfWater = 0;
+
+  // Percorrendo e comparando os valores do parâmetro 'drinks' e da variável 'numberOfDrinks';
+  for (values of numberOfDrinks) {
+    for (values2 of drinks) {
+      if (values == values2) {
+        glassOfWater += values;
+      }
+    }
+  }
+
+  // Retorno do número de copos dágua.
+  if (glassOfWater === 1) {
+    return glassOfWater + ' copo de água'
+  } if (glassOfWater > 1) {
+    return glassOfWater + ' copos de água'
+  }
 }
 
 module.exports = {
